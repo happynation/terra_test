@@ -20,3 +20,6 @@ variable "instance_type" {
 variable "count" {
 
 }
+variable "key_name" {
+
+}
