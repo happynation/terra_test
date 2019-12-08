@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "${var.instance_type}"
   key_name      = "${var.key_name}"
   subnet_id     = "${aws_subnet.public.id}"
-  user_data     = "${file("user_data.sh")}"
+  user_data     = "${file("userdata.sh")}"
   count         = "${var.count}"
   vpc_security_group_ids = ["${aws_security_group.public.id}"]
   associate_public_ip_address = "true"
